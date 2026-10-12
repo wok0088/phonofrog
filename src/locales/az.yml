@@ -1722,6 +1722,12 @@ translationHub:
   translationFailed: Tərcümə alınmadı
   translationFailedFallback: Tərcümə alınmadı
   retryTranslation: Yenidən tərcümə et
+  youdao:
+    uk: Brit.
+    us: ABŞ
+    pinyin: Pinyin
+    playUk: Britaniya tələffüzünü səsləndir
+    playUs: Amerika tələffüzünü səsləndir
 languages:
   eng: İngilis dili
   cmn: Sadələşdirilmiş çin dili

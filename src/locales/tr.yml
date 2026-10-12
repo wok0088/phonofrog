@@ -1724,6 +1724,12 @@ translationHub:
   translationFailed: Çeviri Başarısız
   translationFailedFallback: Çeviri başarısız
   retryTranslation: Çeviriyi yeniden dene
+  youdao:
+    uk: İng.
+    us: ABD
+    pinyin: Pinyin
+    playUk: İngiliz telaffuzunu çal
+    playUs: Amerikan telaffuzunu çal
 languages:
   eng: İngilizce
   cmn: Basitleştirilmiş Çince

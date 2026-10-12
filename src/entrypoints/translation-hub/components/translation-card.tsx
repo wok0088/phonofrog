@@ -31,6 +31,7 @@ import {
   translateRequestAtom,
   translationCardExpandedStateAtom,
 } from "../atoms"
+import { YoudaoEntry } from "./youdao-entry"
 
 interface TranslationCardProps {
   providerId: string
@@ -54,6 +55,7 @@ export function TranslationCard({
   const { play, stop, isFetching, isPlaying } = useTextToSpeech(ANALYTICS_SURFACE.TRANSLATION_HUB)
 
   const provider = resolveProviderRefForCapability("pageTranslation", providersConfig, providerId)
+  const isYoudao = provider?.kind === "local" && provider.config.provider === "youdao-translate"
   const providerLogo =
     provider?.kind === "system"
       ? BUILT_IN_AI_PROVIDER_LOGO
@@ -332,7 +334,15 @@ export function TranslationCard({
               key={mutation.data}
               className="animate-in text-base leading-relaxed whitespace-pre-wrap duration-300 fade-in"
             >
-              {mutation.data}
+              {isYoudao && request ? (
+                <YoudaoEntry
+                  inputText={request.inputText}
+                  targetLanguage={request.targetLanguage}
+                  translation={mutation.data ?? ""}
+                />
+              ) : (
+                mutation.data
+              )}
             </div>
           )}
         </div>

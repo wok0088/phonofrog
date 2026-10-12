@@ -10,6 +10,7 @@ import { deeplTranslate } from "./api/deepl"
 import { deeplxTranslate } from "./api/deeplx"
 import { googleTranslate } from "./api/google"
 import { microsoftTranslate } from "./api/microsoft"
+import { youdaoTranslate } from "./api/youdao"
 import { prepareTranslationText } from "./text-preparation"
 import { normalizeTranslationOutput } from "./translation-output-normalization"
 
@@ -38,7 +39,19 @@ export async function executeTranslate<TContext>(
   const { provider } = providerConfig
   let translatedText = ""
 
-  if (isNonAPIProvider(provider)) {
+  if (provider === "youdao-translate") {
+    // Takes ISO 639-3 codes: "zh" alone cannot tell Mandarin from Cantonese, which
+    // Youdao does not produce.
+    translatedText = await youdaoTranslate(
+      preparedText,
+      langConfig.sourceCode,
+      langConfig.targetCode,
+      {
+        textFormat: options?.textFormat,
+        signal: options?.signal,
+      },
+    )
+  } else if (isNonAPIProvider(provider)) {
     const sourceLang =
       langConfig.sourceCode === "auto" ? "auto" : (ISO6393_TO_6391[langConfig.sourceCode] ?? "auto")
     const targetLang = ISO6393_TO_6391[langConfig.targetCode]

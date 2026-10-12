@@ -1729,6 +1729,12 @@ translationHub:
   translationFailed: Falló la traducción
   translationFailedFallback: Falló la traducción
   retryTranslation: Reintentar traducción
+  youdao:
+    uk: RU
+    us: EE. UU.
+    pinyin: Pinyin
+    playUk: Reproducir pronunciación británica
+    playUs: Reproducir pronunciación estadounidense
 languages:
   eng: Inglés
   cmn: Chino simplificado

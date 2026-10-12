@@ -17,6 +17,7 @@ import deeplxLogoDark from "@/assets/providers/deeplx-dark.svg?url&no-inline"
 import deeplxLogoLight from "@/assets/providers/deeplx-light.svg?url&no-inline"
 import jalapenoCloudLogo from "@/assets/providers/jalapeno-cloud.png?url&no-inline"
 import tensdaqLogoColor from "@/assets/providers/tensdaq-color.svg?url&no-inline"
+import youdaoLogo from "@/assets/providers/youdao.svg?url&no-inline"
 import { env } from "@/env"
 import {
   API_PROVIDER_TYPES,
@@ -207,6 +208,11 @@ export const PROVIDER_ITEMS: Record<
     name: NON_API_TRANSLATE_PROVIDERS_MAP["google-translate"],
     website: "https://translate.google.com",
   },
+  "youdao-translate": {
+    logo: () => youdaoLogo,
+    name: NON_API_TRANSLATE_PROVIDERS_MAP["youdao-translate"],
+    website: "https://dict.youdao.com",
+  },
   deeplx: {
     logo: (theme: Theme) => (theme === "light" ? deeplxLogoLight : deeplxLogoDark),
     name: "DeepLX",
@@ -385,6 +391,12 @@ export const DEFAULT_PROVIDER_CONFIG = {
     name: PROVIDER_ITEMS["microsoft-translate"].name,
     enabled: true,
     provider: "microsoft-translate",
+  },
+  "youdao-translate": {
+    id: "youdao-translate-default",
+    name: PROVIDER_ITEMS["youdao-translate"].name,
+    enabled: true,
+    provider: "youdao-translate",
   },
   jalapenocloud: {
     id: "jalapenocloud-default",
@@ -639,6 +651,7 @@ export const DEFAULT_PROVIDER_CONFIG = {
 
 export const GOOGLE_TRANSLATE_PROVIDER_ID = DEFAULT_PROVIDER_CONFIG["google-translate"].id
 export const MICROSOFT_TRANSLATE_PROVIDER_ID = DEFAULT_PROVIDER_CONFIG["microsoft-translate"].id
+export const YOUDAO_TRANSLATE_PROVIDER_ID = DEFAULT_PROVIDER_CONFIG["youdao-translate"].id
 
 /**
  * Headers a provider is always called with, merged over whatever the user set. The user may add
@@ -700,6 +713,7 @@ export const PROVIDER_URL_PLACEHOLDERS: Partial<Record<APIProviderTypes, string>
 export const DEFAULT_PROVIDER_CONFIG_LIST: ProvidersConfig = [
   DEFAULT_PROVIDER_CONFIG["google-translate"],
   DEFAULT_PROVIDER_CONFIG["microsoft-translate"],
+  DEFAULT_PROVIDER_CONFIG["youdao-translate"],
   DEFAULT_PROVIDER_CONFIG.openai,
   DEFAULT_PROVIDER_CONFIG.jalapenocloud,
   DEFAULT_PROVIDER_CONFIG.deepseek,

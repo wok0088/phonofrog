@@ -1734,6 +1734,12 @@ translationHub:
   translationFailed: 翻译失败
   translationFailedFallback: 翻译失败
   retryTranslation: 重试翻译
+  youdao:
+    uk: 英
+    us: 美
+    pinyin: 拼音
+    playUk: 播放英式发音
+    playUs: 播放美式发音
 languages:
   eng: 英语
   cmn: 简体中文

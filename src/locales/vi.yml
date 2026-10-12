@@ -1724,6 +1724,12 @@ translationHub:
   translationFailed: Dịch Thất Bại
   translationFailedFallback: Dịch thất bại
   retryTranslation: Thử lại dịch
+  youdao:
+    uk: Anh
+    us: Mỹ
+    pinyin: Bính âm
+    playUk: Phát âm Anh-Anh
+    playUs: Phát âm Anh-Mỹ
 languages:
   eng: Tiếng Anh
   cmn: Tiếng Trung giản thể

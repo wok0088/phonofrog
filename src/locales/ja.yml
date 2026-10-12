@@ -1724,6 +1724,12 @@ translationHub:
   translationFailed: 翻訳に失敗しました
   translationFailedFallback: 翻訳に失敗しました
   retryTranslation: 翻訳を再試行
+  youdao:
+    uk: 英
+    us: 米
+    pinyin: ピンイン
+    playUk: イギリス英語の発音を再生
+    playUs: アメリカ英語の発音を再生
 languages:
   eng: 英語
   cmn: 簡体字中国語

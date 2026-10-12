@@ -1724,6 +1724,12 @@ translationHub:
   translationFailed: Ошибка перевода
   translationFailedFallback: Ошибка перевода
   retryTranslation: Повторить перевод
+  youdao:
+    uk: брит.
+    us: амер.
+    pinyin: Пиньинь
+    playUk: Воспроизвести британское произношение
+    playUs: Воспроизвести американское произношение
 languages:
   eng: Английский
   cmn: Упрощённый китайский

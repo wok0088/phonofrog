@@ -224,6 +224,9 @@ export const providerConfigSchemaList = [
   baseProviderConfigSchema.extend({
     provider: z.literal("microsoft-translate"),
   }),
+  baseProviderConfigSchema.extend({
+    provider: z.literal("youdao-translate"),
+  }),
 ] as const
 
 export const llmProviderConfigItemSchema = z.discriminatedUnion(

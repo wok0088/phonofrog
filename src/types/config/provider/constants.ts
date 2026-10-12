@@ -21,6 +21,7 @@ export {
 export const TRANSLATE_PROVIDER_TYPES = [
   "google-translate",
   "microsoft-translate",
+  "youdao-translate",
   "deeplx",
   "deepl",
   "openai",
@@ -236,6 +237,7 @@ export function isNonAPIProvider(provider: string): provider is NonAPIProviderTy
 export const ALL_PROVIDER_TYPES = [
   "google-translate",
   "microsoft-translate",
+  "youdao-translate",
   "deeplx",
   "deepl",
   "openai-compatible",

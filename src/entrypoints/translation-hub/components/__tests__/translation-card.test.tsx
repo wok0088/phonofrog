@@ -63,6 +63,7 @@ vi.mock("@tanstack/react-query", () => ({
     mutationFnState.current = options.mutationFn
     return useMutationMock.current
   },
+  useQuery: () => ({ data: undefined }),
 }))
 
 vi.mock("jotai", () => ({

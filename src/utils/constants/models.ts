@@ -468,18 +468,24 @@ export const LLM_PROVIDER_MODELS = {
   ],
 } as const
 
-export const NON_API_TRANSLATE_PROVIDERS = ["google-translate", "microsoft-translate"] as const
+export const NON_API_TRANSLATE_PROVIDERS = [
+  "google-translate",
+  "microsoft-translate",
+  "youdao-translate",
+] as const
 export const NON_API_TRANSLATE_PROVIDERS_MAP: Record<
   (typeof NON_API_TRANSLATE_PROVIDERS)[number],
   string
 > = {
   "google-translate": "Google Translate",
   "microsoft-translate": "Microsoft Translator",
+  "youdao-translate": "Youdao Dictionary",
 }
 
 export const PURE_TRANSLATE_PROVIDERS = [
   "google-translate",
   "microsoft-translate",
+  "youdao-translate",
   "deeplx",
   "deepl",
 ] as const

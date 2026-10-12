@@ -1871,6 +1871,12 @@ translationHub:
   translationFailed: Translation Failed
   translationFailedFallback: Translation failed
   retryTranslation: Retry translation
+  youdao:
+    uk: UK
+    us: US
+    pinyin: Pinyin
+    playUk: Play UK pronunciation
+    playUs: Play US pronunciation
 languages:
   eng: English
   cmn: Simplified Chinese
