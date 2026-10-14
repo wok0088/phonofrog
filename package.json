@@ -157,7 +157,7 @@
     "oxfmt": "^0.72.0",
     "oxlint": "^1.87.0",
     "oxlint-plugin-query": "^0.1.1",
-    "oxlint-tsgolint": "^7.0.2003",
+    "oxlint-tsgolint": "^7.0.2004",
     "postcss": "^8.5.29",
     "postcss-rem-to-responsive-pixel": "^7.0.7",
     "postcss-value-parser": "^4.2.0",
